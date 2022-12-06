@@ -7,6 +7,24 @@ if (!isParsedN)
 }
 string[] stringArray = StringArray(n);
 int numberOfLines = NumberOfLines(stringArray);
+string[] arrayLessThanFourCharacters = ArrayLessThanFourCharacters(stringArray);
+PrintArray(arrayLessThanFourCharacters);
+string[] ArrayLessThanFourCharacters(string[] str)
+{
+    string[] finalArray = new string[numberOfLines];
+    int i = 0;
+    int j = 0;
+    while (i < str.Length)
+    {
+        if (str[i].Length <= 3)
+        {
+            finalArray[j] = str[i];
+            j++;
+        }
+        i++;
+    }
+    return finalArray;
+}
 int NumberOfLines(string[] array)
 {
     int count = 0;
@@ -27,4 +45,13 @@ string[] StringArray(int n)
         array[i] = Console.ReadLine();
     }
     return array;
+}
+void PrintArray(string[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ,");
+    }
+    Console.Write("]");
 }
