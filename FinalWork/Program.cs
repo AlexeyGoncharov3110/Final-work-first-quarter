@@ -6,6 +6,17 @@ if (!isParsedN)
     return;
 }
 string[] stringArray = StringArray(n);
+int numberOfLines = NumberOfLines(stringArray);
+int NumberOfLines(string[] array)
+{
+    int count = 0;
+    for (int j = 0; j < array.Length; j++)
+    {
+        if (array[j].Length <= 3)
+            count++;
+    }
+    return count;
+}
 string[] StringArray(int n)
 {
     string[] array = new string[n];
