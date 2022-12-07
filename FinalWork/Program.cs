@@ -7,11 +7,11 @@ if (!isParsedN)
 }
 string[] stringArray = StringArray(n);
 int numberOfLines = NumberOfLines(stringArray);
-string[] arrayLessThanFourCharacters = ArrayLessThanFourCharacters(stringArray);
+string[] arrayLessThanFourCharacters = ArrayLessThanFourCharacters(stringArray, numberOfLines);
 PrintArray(arrayLessThanFourCharacters);
-string[] ArrayLessThanFourCharacters(string[] str)
+string[] ArrayLessThanFourCharacters(string[] str, int size)
 {
-    string[] finalArray = new string[numberOfLines];
+    string[] finalArray = new string[size];
     int i = 0;
     int j = 0;
     while (i < str.Length)
